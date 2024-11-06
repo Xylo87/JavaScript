@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: black;
+        }
+    </style>
+    <script>
+        console.log("Accorche toi mon Pépère")
+        
+        
+        // const A = 6
+        // let B = 7
+        //     B = 9
+        
+        // const test = "coucou ça va ? Moi c'est Théo"
+        // const test2 = "et toi c'est comment ?"
+        
+        // const real = 3.14
+        
+        // const isMajeur = true
+        
+        // const test3 = null
+        // const test4 = undefined
+        
+        // const notes = [12, 14, 6, 11, 5, 18, 12, "pas terrible lol", ["nan vraiment pas ouf", "genre vraiment", "sans dec'"]]
+        // const notes2 = notes
+        // console.table(notes)
+        
+        // const person = {
+        //     firstname: "Kazel", 
+        //     lastname: "Papin",
+        //     age: 25,
+        //     notes: [8, 12, 5],
+        //     job: {
+        //         name: "Vulcania",
+        //         hours: 15
+        //     },
+        //     "gender": "male",
+        //     [A]: 23
+        //     > Possible d'accéder à une variable déclarée en dehors
+        // }
+        // console.table(person)
+        
+        // let C = "Wesh"
+        // let D = C
+        // manipulables dans le terminal
+        
+        
+        // // CONDITIONS
+        // const age = 17
+        // const country = "US"
+        
+        // if (
+        //     (country === "FR" && age >= 18) || 
+        //     (country === "US" && age >= 16)
+        //     ) {
+        //     console.log("c'est tout bon")
+        // } else {
+        //     console.log("bah tu prends le vélo")
+        // }
+        
+        // // autre manière d'écrire les conditions > + CLAIR !!!
+        // const conduiteFR = country === "FR" && age >= 18
+        // const conduiteUS = country === "US" && age >= 16
+        // if (conduiteFR || conduiteUS) {
+        //     console.log("c'est tout bon")
+        //  } else {
+        //     console.log("bah tu prends le vélo")
+        //  }
+         
+        // const conduiteRU = country === "FR" && age >= 18
+        // const conduiteIT = country === "US" && age >= 16
+        // if (conduiteRU) {
+        //     console.log("c'est tout bon pour la Russie")
+        // } else if (conduiteIT) {
+        //     console.log("c'est tout bon pour l'Italie")
+        // } else {
+        //     console.log("bah tu prends le vélo")
+        //    }
+        
+        // // autre manière d'écrire les conditions / permet de vérifier qu'une variable contient une valeur / écriture plus complexe
+        // switch (country) {
+        //     case "FR":
+        //         console.log("Je suis en France")
+        //         break
+        //     case "US":
+        //         console.log("Je suis aux USA")
+        //         break
+        //     default: 
+        //         console.log("Je suis dans un pays inconnu")    
+        // }
+
+
+        // EXOS CONDITIONS
+        // const year = 2024
+        // const birthyear = prompt("Quel est votre année de naissance ?")
+        // const age = year - birthyear
+        // if (age < 13 )
+        //     console.log("Vous pouvez aller voir Lilo & Stitch")
+        // else if (age < 18)
+        //     console.log("Vous pouvez aller voir Matrix ou Lilo & Stitch si vous voulez")
+        // else
+        //     console.log("Vous pouvez aller voir Evil Dead, Matrix et Lilo & Stitch !")
+
+        // const A = prompt("Entrez votre premier chiffre")
+        // const B = prompt("Entrez votre second chiffre")
+        // const result = A * B
+        // if (result > 0)
+        //     console.log(A, "x", B, "est positif")
+        // else 
+        //     console.log(A, "x", B, "est négatif")
+
+        // code simplifié
+        // const A = prompt("Entrez votre premier chiffre")
+        // const B = prompt("Entrez votre second chiffre")
+        // const result = A * B
+        // let signe
+        // if (isNaN(result)) {
+        //     console.log("Opération imposssible:", A, "x", B)
+        // } else {
+        //     if (result >= 0) {
+        //         signe = "positif"
+        //     } else {
+        //         signe = "négatif"
+        //     }
+        // console.log(A, "x", B, "=", result, "est", signe)
+        // }
+
+        
+        // variables n'existent pas en dehors de leurs blocs d'origine et enfants > conditions/boucles/fonctions/objets
+        // // let age = 18
+        // // if (age >= 18 ) {
+        // //     let salutations = "hello"
+        // // }
+        // // console.log(salutations)
+
+
+        // BOUCLES
+        // let i = 0
+        // while (i < 10) {
+        //     console.log("Coucou" + " " + i)
+        //     i = i + 1
+        // }
+
+        
+        // for (let i = 0; i < 10; i++) {
+        //     console.log("Hello")
+        // }
+        
+        // const notes = [12, 8, 9, 17, 10, 6, 11, 14]
+        // const person = {
+        //     firstname: "Jack",
+        //     lastname: "Burton"
+        // }
+        // const greeting = "Kikoo"
+        // for (let i = 0; i < notes.length; i++) {
+        //     console.log(i)   
+        //     console.log(notes[i])
+        // }
+        
+        // manière simplifiée d'afficher les différents index d'un tableau
+        // for (let i in notes) {
+        //     console.log(i)
+        //     console.log(notes[i])
+        // }
+
+        // "i" prend automatiquement comme valeur les clés de l'objet
+        // for (let i in person) {
+        //     console.log(i)
+        //     console.log(person[i])
+        // }
+
+        // manière simplifiée d'afficher directement les différentes valeurs d'un tableau (mais pas d'un objet)
+        // for (let note of notes) {
+        //     console.log(note)
+        // }
+
+        // afficher chaque lettre unique dans une chaîne de caractère
+        // for (let letter of greeting) {
+        //     console.log(letter)
+        // }
+        // afficher index de la CdC (tableau de caractères)
+        // for (let letter in greeting) {
+        //     console.log(letter)
+        // }
+
+        // EXOS BOUCLES
+        let chiffre = prompt("Donnez un chiffre entre 0 et 10")
+            if (chiffre > 10 || chiffre < 0) {
+                console.log("T'es Neuneu ou quoi ?")
+            }
+            else {
+                while (chiffre >= 0) {
+                console.log(chiffre)
+                chiffre = chiffre - 1
+                // chiffre--
+                }
+                // for (let i = chiffre; i >= 0; i--)
+                // console.log(i)
+                // }
+            }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
