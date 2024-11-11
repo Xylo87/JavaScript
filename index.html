@@ -228,7 +228,7 @@
         // }
 
 
-        // fonctions
+        // FONCTIONS
         // function canDrive(age, pays) {
         //     if ((age >= 18 && pays === "FR") ||
         //         (age >= 16 && pays === "US")) {
@@ -240,7 +240,7 @@
         // console.log(canDrive(17, "US"))
 
         // autre manière de déclarer une fonction > portée différente ! > fonction déclarée en dehors d'une variable = hoisting (utilisable dans l'ensemble du code, même au dessus)
-        // const canDrive = function (age, pays) {...}
+        // const canDrive = function(age, pays) {...}
 
         // fonction peut être déclaré sans retour
         // function greeting(name) {
@@ -291,12 +291,111 @@
         //     } 
         // }
         // isPair(2, function () {
-        //     console.log("Mon nombre est impair")
+        //     console.log("Mon nombre est pair")
         // })
 
 
         // EXOS FONCTIONS
         
+        
+        // : Nombre aléatoire entre 0 et 10 (3 essais pour deviner)
+        
+        // function getRandomIntInclusive(min, max) {
+        //     min = Math.ceil(min);
+        //     max = Math.floor(max);
+        //     return Math.floor(Math.random() * (max - min + 1)) + min;
+        // }
+        // const solution = getRandomIntInclusive(0, 10)
+        // console.log(solution)
+        
+        // // Return === ? va renvoyer "True" ou "False" + aura une fonction de Break
+        // function isRight(n) {
+        //     return solution === n
+        // }
+        // // const solution2 = isRight(2)
+        // // console.log(solution2)
+
+        // function guess() {
+        //     const n2 = prompt("Entrez votre chiffre (3 essais)") * 1 
+        //     return isRight(n2)      
+        // }
+        // // const solution3 = guess(2)
+        // // console.log(solution3)
+
+        // for (i = 0; i < 3; i++) {
+        //     if(guess()) {
+        //         console.log("Bravo")
+        //         break;
+        //     } else if (i === 2) {
+        //         console.log("Vous avez perdu")
+        //     }
+        // }
+
+
+        // : Déterminer si un nombre est premier ou non
+
+        // Return a une rôle de Break + premier "if" = early return
+        // function isPremier(n) {    
+        //     if (n < 2) {
+        //         return false
+        //     }
+        //     for (let i = n - 1; i > 1; i--) {
+        //         if (n % i === 0) {
+        //             return false
+        //         }
+        //     }
+        //     return true
+        // }
+
+        // console.log("0", isPremier(0))
+        // console.log("1", isPremier(1))
+        // console.log("2", isPremier(2))
+        // console.log("3", isPremier(3))
+        // console.log("11", isPremier(11))
+        // console.log("12", isPremier(12))
+
+
+        // : Déterminer si un mot est un palindrome
+        
+        // const phrase = "Kayak"
+
+        // // division de la CdC en utilisant un pattern en paramètre
+        // let phrasespl = phrase.split("")
+        // console.log(phrasespl)
+
+        // let phraserev = phrasespl.reverse()
+        // console.log(phraserev)
+
+        // // jointure de la CdC en utilisant un pattern en paramètre
+        // let phraseJ = phraserev.join("")
+        // console.log(phraseJ)
+
+        // let phraseFinal = phraseJ.toUpperCase()
+        // console.log(phraseFinal)
+
+        // if (phraseFinal === phrase.toUpperCase()) {
+        //     console.log("C'est bon !")
+        // } else {
+        //     console.log("C'est pas bon !")
+        // }
+        
+        
+        // function isPalindrome (word) {
+        //     const letters = word.split("")
+        //     letters.reverse()
+        //     const reversed = letters.join("")
+        //     return word.toUpperCase() === reversed.toUpperCase()
+        // }
+        
+        // version simplifiée
+        // function isPalindrome (word) {
+        //     const reversedWord = word
+        //         .split('')
+        //         .reverse()
+        //         .join('')
+        //     return word.toUpperCase() === reversedWord.toUpperCase()
+        // }
+
     </script>
 </head>
 <body>
