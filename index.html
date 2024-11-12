@@ -396,6 +396,116 @@
         //     return word.toUpperCase() === reversedWord.toUpperCase()
         // }
 
+
+        // FONCTIONS USUELLES
+
+        
+        // tableaux >
+
+        const notes = [12, 17, 18, 9, 7, 5]
+        const notes2 = [14, 18, 19]
+        
+        // console.log(notes.at(-1))
+        // > accéder aux index en négatif
+
+        // console.log(notes2.concat(notes))
+        // > concaténer 2 tableaux
+    
+        // const goodNotes = notes.filter((note) => note >= 10)
+        // console.log(goodNotes)
+        // > filter les valeurs d'un tableau avec une fonction (par ex. notes au dessus d'un certain chiffre) > créer un nouveau tableau dans une variable
+
+        // const found = notes.find(note => note > 10)
+        // console.log(found)
+        // > trouver le premier élément d'un tableau qui correspond à la condition
+
+        // .findIndex
+        // > même chose, mais renvoie l'index de l'élément, et non l'élément lui même
+
+        // .findlast
+
+        // .findlastindex
+
+        // .flat
+        // > aplatir des niveaux de profondeurs de tableaux mutlidimensionnels
+        // .flat(2) > ex. aplatir les 2 premiers niveaux de profondeur
+
+        // notes.forEach((note, index) => {
+        //     console.log(note, index)
+        // })
+        // > parcourir toutes les valeurs d'un tableau et les index qui correspondent
+
+        // console.log(Array.from("salut c'est moi"))
+        // > transformer CdC en tableau 
+
+        // console.log(notes.includes(17))
+        // > savoir si valeur est incluse dans un tableau
+
+        // .indexOf 
+        // > donne l'index d'une valeur précise > -1 si valeur n'est pas dans le tableau
+        // > .lastindexOf
+
+        // const map1 = notes.map(x => x * 2)
+        // console.log(map1)
+        // > modifier les valeurs d'un tableau
+
+        // .pop > retirer le dernier élément d'un tableau
+        // .push > envoyer un nouvel élément dans un tableau
+
+        // console.log(notes.reduce((acc, note) => {
+        //     return acc + note
+        // }, 0)
+        // )
+        // OU 
+        // console.log(notes.reduce((acc, note) => acc + note, 0))
+        // > permet d'additionner les valeurs contenues dans un tableau > une seule valeur à la sortie
+
+        // .shift 
+        // > retire le premier élément d'un tableau
+
+        // .slice(début, fin)
+        // > donner un segment de tableau
+        // >> .slice().reverse() > permet d'inverse un tableau à la place de la fonction .reverse asna modifier le tableau original
+
+        // .sort 
+        // > réorganiser éléments d'un tableau
+        // .splice 
+        // > modifier un élément spécifiquement dans un tableau
+
+        // .unshift
+        // > insérer éléments au début d'un tableau
+
+
+        // objets >
+
+        // const target = {
+        //     a: 1,
+        //     b: 1,
+        // }
+        // const source = {
+        //     b: 4,
+        //     c: 5,
+        // }
+        // const returnedTarget = Object.assign(target, source)
+        // console.log(target)
+        // > assigne les valeurs d'un objet dans un autre
+        // const target2 = Object.assign({}, target)
+        // console.log(target2)
+        // > dupliquer un objet sans modifier l'original
+
+        // console.log(Object.entries(target))
+        // > transforme un objet en tableau > va permettre de faire un boucle For avec les éléments d'un objet
+
+        // Object.keys
+        // > transforme en tableau uniquement les clés dans un objet > va permettre de faire un boucle For avec les éléments d'un objet
+
+        // Object.values
+        // > transforme en tableau uniquement les valeurs dans un objet > va permettre de faire un boucle For avec les éléments d'un objet
+
+        // Object.freeze
+        // > geler les élements d'un objet pour qu'ils ne puissent être modifiés
+
+
     </script>
 </head>
 <body>
