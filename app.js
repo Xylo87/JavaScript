@@ -200,9 +200,38 @@
 // })
 // obtenir des infos sur les différents boutons sur lequels on a cliqué
 
-function onButtonClick(event) {
-    console.log(event.currentTarget)
-}
-document.querySelectorAll("button").forEach(button => {
-    button.addEventListener("click", onButtonClick)
-})
+// function onButtonClick(event) {
+//     event.preventDefault()
+// }
+// document.querySelectorAll("button").forEach(button => {
+//     button.addEventListener("click", onButtonClick)
+// })
+// empêche le comportement par défaut d'un écouteur d'évènement > ex. empêcher la soumission d'un formulaire pas correctement rempli
+
+// document.querySelector("div").addEventListener("click", function name(params) {
+//     console.log("click div")
+// } )
+// function onButtonClick(event) {
+//     console.log("button click")
+//     event.preventDefault()
+//     event.stopPropagation()
+// }
+// document.querySelectorAll("button").forEach(button => {
+//     button.addEventListener("click", onButtonClick)
+// })
+// empêcher la propagation d'un évènement d'un parent à l'autre
+
+// document.querySelector("div").addEventListener("click", function name(params) {
+//     console.log("click div")
+// } )
+// function onButtonClick(event) {
+//     console.log("button click")
+//     event.preventDefault()
+//     event.stopPropagation()
+// }
+// document.querySelectorAll("button").forEach(button => {
+//     button.addEventListener("click", onButtonClick, {
+//         once: true
+//     })
+// })
+// évènement écouté une fois uniquement
