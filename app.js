@@ -90,7 +90,7 @@
 // créer un nouvel élément HTML et l'ajouter à la fin ou au début dans une structure parente > même référence d'element créé, déplacement d'élément, pas de clonage
 
 // const li = document.querySelector("ul li:first-of-type")
-const ul = document.querySelector("ul")
+// const ul = document.querySelector("ul")
 // ul.append(li)
 // > déplacement d'élément, pas de clonage > ex. 2
 
@@ -98,3 +98,111 @@ const ul = document.querySelector("ul")
 // div.innerHTML = "Bonjour les gens"
 // ul.insertAdjacentElement("afterbegin", div)
 // insérer un élément donné à une position donnée d'un autre élément
+
+
+
+// SELECTIONS D'ENFANTS/PARENTS
+
+// console.log(
+//     ul.querySelector("li")
+// )
+// sélection d'un enfant > parent et enfant identifié par la définition de la variable
+
+// console.log(
+//     ul.children
+// )
+
+// console.log(
+//     ul.childNodes
+// )
+// sélectionne tous les éléments noeuds (enfants + élements non-HTML)
+
+// ul.firstChild
+// premier noeud enfant
+
+// ul.firstElementChild
+// premier élément HTML enfant
+
+// ul.childElementCount / ul.children.length
+// afficher le nombre d'élements HTML enfants
+
+// li.parentNode / li.parentElement
+// donne noeud/élément parent
+
+// li.nextElementSibling / li.nextSibling
+// élément suivant / noeud suivant
+
+// li.previousElementSibling / li.previousSibling
+// élément précédent / noeud précédent
+
+
+// console.log(
+//     li.remove()
+// )
+// supprime élément de la page
+
+// ul.append(li.cloneNode(true))
+// dupliquer un élément et ses enfants (élements HTML)
+
+// paragraph  = "bla bla bla"
+// paragraph.replace("bla", "bloop")
+// remplacer un morceau de chaîne de caractère par un autre
+
+// console.log(ul.contains(li))
+// vérifier si élément en contient un autre (affiche True si c'est le cas)
+
+
+
+
+// EXOS
+
+// async function main () {
+//     const wrapper = document.querySelector("#lastPosts")
+// const loader = document.createElement("p")
+// loader.innerText = "Chargement..."
+// wrapper.append(loader)
+// const r = await fetch("https://jsonplaceholder.typicode.com/posts?_limit=5", {
+//     headers: {
+//         Accept: "application/js"
+//     }
+// })
+// if (!r.ok) {
+//     loader.innerText = "Impossible de charger les articles"
+//     loader.style.color = "red"
+//     return
+// }
+// }
+
+// main()
+
+
+
+// EVENT LISTENERS
+
+// const button = document.querySelector("button")
+// // button.addEventListener("click", function name() {
+// //     alert("Bonjour")
+// // })
+// // évènement au clic
+
+// button.addEventListener("click", function(event){
+//     console.log(event.target, event.currentTarget)
+// }) 
+// target > élément HTML réel
+// currentTarget > élement sur lequel est situé l'écouteur d'évènements
+
+
+// function onButtonClick(event) {
+//     console.log(event.currentTarget)
+// }
+// document.querySelectorAll("button").forEach(button => {
+//     button.addEventListener("click", onButtonClick)
+// })
+// obtenir des infos sur les différents boutons sur lequels on a cliqué
+
+function onButtonClick(event) {
+    console.log(event.currentTarget)
+}
+document.querySelectorAll("button").forEach(button => {
+    button.addEventListener("click", onButtonClick)
+})
