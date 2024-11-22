@@ -1,7 +1,5 @@
 const square = document.querySelector(".square")
 
-console.log(square)
-
 square.addEventListener("click", function CSSDisplay() {
     alert(
         " - Class : " + square.getAttribute("class") + "\n" +
