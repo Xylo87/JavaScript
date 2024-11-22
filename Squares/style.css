@@ -1,0 +1,22 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: black;
+    color: white;
+}
+
+.square {
+    display: flex;
+    width: 200px;
+    height: 200px;
+    background: rgb(221, 114, 8);
+    margin: 100px;
+    font-family: 'Franklin Gothic Medium';
+    font-size: xx-large;
+    justify-content: center;
+    align-items: center;
+}
