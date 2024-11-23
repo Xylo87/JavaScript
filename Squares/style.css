@@ -9,14 +9,71 @@ body {
     color: white;
 }
 
-.square {
+.wrapper {
+    display: flex;
+    margin: 100px;
+    gap: 10px;
+    width: 850px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.squareWP {
     display: flex;
     width: 200px;
     height: 200px;
-    background: rgb(221, 114, 8);
-    margin: 100px;
+    background: rgb(73, 71, 66);
     font-family: 'Franklin Gothic Medium';
     font-size: xx-large;
     justify-content: center;
     align-items: center;
+    text-align: center;
+}
+
+.squareDE {
+    display: flex;
+    width: 200px;
+    height: 200px;
+    background: rgb(120, 94, 24);
+    font-family: 'Franklin Gothic Medium';
+    font-size: xx-large;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.squareSNW {
+    display: flex;
+    width: 200px;
+    height: 200px;
+    background: rgb(17, 45, 33);
+    font-family: 'Franklin Gothic Medium';
+    font-size: xx-large;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.squareKNY {
+    display: flex;
+    width: 200px;
+    height: 200px;
+    background: rgb(197, 61, 15);
+    font-family: 'Franklin Gothic Medium';
+    font-size: xx-large;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.squareO {
+    display: flex;
+    width: 200px;
+    height: 200px;
+    background: rgb(192, 31, 213);
+    font-family: 'Franklin Gothic Medium';
+    font-size: xx-large;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
