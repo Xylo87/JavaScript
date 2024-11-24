@@ -64,7 +64,7 @@ const squareO = document.querySelector("#squareO")
 
 document.querySelectorAll(".square").forEach(carre => {
     carre.addEventListener("click", function colorchange(forme) {
-         squareO.setAttribute("id", carre.id)
+        squareO.setAttribute("id", carre.id)
         squareO.innerHTML = getComputedStyle(carre).background
     })
 })
