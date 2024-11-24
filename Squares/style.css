@@ -9,7 +9,7 @@ body {
     color: white;
 }
 
-.wrapper {
+#wrapper {
     display: flex;
     margin: 100px;
     gap: 10px;
@@ -18,62 +18,33 @@ body {
     justify-content: center;
 }
 
-.squareWP {
+.square {
     display: flex;
     width: 200px;
     height: 200px;
+    font-family: 'Franklin Gothic Medium';
+    font-size: xx-large;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#squareWP {
     background: rgb(73, 71, 66);
-    font-family: 'Franklin Gothic Medium';
-    font-size: xx-large;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
 }
 
-.squareDE {
-    display: flex;
-    width: 200px;
-    height: 200px;
+#squareDE {
     background: rgb(120, 94, 24);
-    font-family: 'Franklin Gothic Medium';
-    font-size: xx-large;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
 }
 
-.squareSNW {
-    display: flex;
-    width: 200px;
-    height: 200px;
+#squareSNW {
     background: rgb(17, 45, 33);
-    font-family: 'Franklin Gothic Medium';
-    font-size: xx-large;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
 }
 
-.squareKNY {
-    display: flex;
-    width: 200px;
-    height: 200px;
+#squareKNY {
     background: rgb(197, 61, 15);
-    font-family: 'Franklin Gothic Medium';
-    font-size: xx-large;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
 }
 
-.squareO {
-    display: flex;
-    width: 200px;
-    height: 200px;
+#squareO {
     background: rgb(192, 31, 213);
-    font-family: 'Franklin Gothic Medium';
-    font-size: xx-large;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
 }
