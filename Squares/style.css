@@ -28,4 +28,11 @@ body {
     align-items: center;
     text-align: center;
     background: rgb(17, 45, 33);
+    transition: 1500ms;
+}
+
+.redroll {
+    background: rgb(133, 31, 31);
+    transform: scale(0.75) rotate(360deg);
+    transition: 1500ms;
 }
