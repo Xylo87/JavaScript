@@ -49,9 +49,9 @@ squareSNW.addEventListener("click", colorchange)
 squareKNY.addEventListener("click", colorchange)
 
 
-function colorchange(evt) {
-    squareO.setAttribute("id", evt.target.id)
-    squareO.innerHTML = getComputedStyle(evt.target).background
+function colorchange(carre) {
+    squareO.setAttribute("id", carre.target.id)
+    squareO.innerHTML = getComputedStyle(carre.target).background
 }
 
 
