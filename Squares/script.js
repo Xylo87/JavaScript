@@ -1,22 +1,22 @@
-// document.querySelectorAll(".square").forEach(carre => {
-//     carre.addEventListener("click", function rollcolor() {
-//         carre.classList.toggle("redroll")
-//     })
-// });
-
-
-const html = document.querySelector("html")
-
+const body = document.querySelector("body")
 
 document.querySelectorAll(".square").forEach(carre => {
-    carre.addEventListener("click", function () {
+
+    const socialName = carre.querySelector("p")
+
+    carre.addEventListener("click", function socialmedia() {
         carre.classList.toggle("box")
+        socialName.classList.toggle("display")
+        if (carre.classList.contains("box")) {
+            body.style.background = getComputedStyle(carre).background
+        }   else {
+            body.style.background = "grey"
+        }
     })
 });
 
+// body.style.background = carre.dataset.color
 
-// test.addEventListener("click", function test2() {
-//     // html.style.background = 
-//     test.classList.toggle("box")
-//     // .classList.toggle("")
-// })
+// carres.forEach((c) => {
+        //     c.classList.remove('box')
+        // })

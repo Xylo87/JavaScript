@@ -4,10 +4,9 @@
     padding: 0;
 }
 
-html {
+body {
     background: grey;
     color: white;
-    height: 100vh;
     transition: 300ms;
 }
 
@@ -37,18 +36,28 @@ h1 {
 }
 
 #FB {
-    background: rgba(56,89,153);
+    background: rgb(56, 89, 153);
 }
 
 #TW {
-    background: rgba(29,161,242);
+    background: rgb(29, 161, 242);
 }
 
 #IG {
-    background: rgba(200,0,135);
+    background: rgb(200, 0, 135);
 }
 
 .box {
     border-radius: 20px;
-    box-shadow: 5px 5px 25px black;
+    box-shadow: 10px 10px 25px black;
 }
+
+.square p {
+    display: none;
+}
+
+.square p.display {
+    display: block;
+    font-size: medium;
+}
+
