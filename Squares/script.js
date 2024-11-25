@@ -34,7 +34,7 @@ document.querySelectorAll(".square").forEach(carre => {
 
 
 
-
+// OLD VERSION
 
 
 // const body = document.querySelector("body")
@@ -53,5 +53,3 @@ document.querySelectorAll(".square").forEach(carre => {
 //         }
 //     })
 // });
-
-// body.style.background = carre.dataset.color
