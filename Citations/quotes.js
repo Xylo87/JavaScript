@@ -91,10 +91,32 @@ let quotes = [
     },
 ]
 
+
 // for (let i in quotes) {
-//     console.log(quotes[i])
+//     quotes[i]
 // }
 
 // for (const element in quotes) {
 //     console.log(element, (quotes[element]))
+// }
+
+
+
+// const test = document.querySelector(".quote")
+
+// console.log(test)
+
+
+// const test2 = quotes[0].content
+
+// console.log(test2)
+
+
+
+// test.innerHTML = test2
+
+
+
+// for (let i in quotes) {
+//     quotes[i].content
 // }
