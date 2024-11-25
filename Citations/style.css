@@ -1,0 +1,19 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    background: rgb(11, 11, 30);
+    color: white;
+}
+
+.quote {
+    background: rgb(111, 111, 111);
+    height: 100px;
+    margin: 15px;
+    border-radius: 10px;
+    border: 1px solid white;
+}

@@ -90,3 +90,11 @@ let quotes = [
         "content": "La vie c’est comme ça tout le temps ? Ou c’est seulement quand on est petit ?"
     },
 ]
+
+// for (let i in quotes) {
+//     console.log(quotes[i])
+// }
+
+// for (const element in quotes) {
+//     console.log(element, (quotes[element]))
+// }
