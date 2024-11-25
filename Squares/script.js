@@ -33,7 +33,7 @@
 
 
 
-// METHODE MOYENNE ???
+// METHODE MOYENNE
 
 
 const squareWP = document.querySelector("#squareWP")
