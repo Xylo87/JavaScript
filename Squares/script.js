@@ -1,5 +1,11 @@
 const carre = document.querySelector(".square")
 
 carre.addEventListener("click", function CSSdisplay() {
-    alert(carre.getAttribute("class"))
+    alert("Class : " + carre.getAttribute("class") + "\n" + 
+    "Class : " + carre.getAttribute("class") + "\n" 
+
+
+
+
+)
 })
