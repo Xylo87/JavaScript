@@ -1,25 +1,31 @@
 const body = document.querySelector("body")
+// ---> sélection du body
 
 document.querySelectorAll(".square").forEach(carre => {
 
     const socialName = carre.querySelector("p")
+    // ---> sélection de chaque paragraphe de chaque carré
 
     carre.addEventListener("click", function socialmedia() {
+        
         if (carre.classList.contains("box")) {
             carre.classList.remove("box")
-            body.style.background = "grey"
             socialName.classList.remove("display")
+            body.style.background = "grey"
             return
         }
+        // ---> déselection d'un carré
         
         document.querySelectorAll(".square").forEach(c => {
             c.classList.remove("box")
             c.querySelector("p").classList.remove("display")
         })
+        // ---> pré-désactivation des carrés
 
         carre.classList.add("box")
         socialName.classList.add("display")
         body.style.background = getComputedStyle(carre).background
+        // ---> activation des carrés
     })
 });
 
