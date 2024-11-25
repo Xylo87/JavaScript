@@ -4,35 +4,51 @@
     padding: 0;
 }
 
-body {
+html {
     background: grey;
     color: white;
+    height: 100vh;
+    transition: 300ms;
+}
+
+h1 {
+    margin-top: 100px;
+    text-align: center;
 }
 
 #wrapper {
     display: flex;
-    margin: 100px;
+    margin-top: 30px;
     gap: 50px;
-    width: 700px;
-    flex-wrap: wrap;
     justify-content: center;
 }
 
 .square {
     display: flex;
-    width: 200px;
-    height: 200px;
+    flex-direction: column;
+    gap: 10px;
+    width: 150px;
+    height: 150px;
     font-family: 'Franklin Gothic Medium';
     font-size: xx-large;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    background: rgb(17, 45, 33);
-    transition: 1500ms;
+    transition: 300ms;
 }
 
-.redroll {
-    background: rgb(133, 31, 31);
-    transform: scale(0.75) rotate(360deg);
-    transition: 1500ms;
+#FB {
+    background: rgba(56,89,153);
+}
+
+#TW {
+    background: rgba(29,161,242);
+}
+
+#IG {
+    background: rgba(200,0,135);
+}
+
+.box {
+    border-radius: 20px;
+    box-shadow: 5px 5px 25px black;
 }
