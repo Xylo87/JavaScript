@@ -1,5 +1,5 @@
-document.querySelectorAll(".square").forEach(carre => {
-    carre.addEventListener("click", function rollcolor() {
-        carre.classList.toggle("redroll")
-    })
-});
+const carre = document.querySelector(".square")
+
+carre.addEventListener("click", function CSSdisplay() {
+    alert(carre.getAttribute("class"))
+})

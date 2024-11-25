@@ -5,17 +5,12 @@
 }
 
 body {
-    background: grey;
+    background: black;
     color: white;
 }
 
 #wrapper {
-    display: flex;
-    margin: 100px;
-    gap: 50px;
-    width: 700px;
-    flex-wrap: wrap;
-    justify-content: center;
+    margin: 100px;    
 }
 
 .square {
@@ -26,13 +21,5 @@ body {
     font-size: xx-large;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    background: rgb(17, 45, 33);
-    transition: 1500ms;
-}
-
-.redroll {
-    background: rgb(133, 31, 31);
-    transform: scale(0.75) rotate(360deg);
-    transition: 1500ms;
+    background: rgb(182, 89, 27);
 }
