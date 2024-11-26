@@ -1,5 +1,8 @@
 import quotes from "./quotes.js"
+// ---> Import
 
+
+// AFFICHAGE CITATIONS
 
 for (let key in quotes) {
     
@@ -29,4 +32,29 @@ for (let key in quotes) {
     blocs.appendChild(blocAuthor)
     blocAuthor.classList.add("small")
     // ---> captation + insert + ajout des auteurs + style des blocs de citations
+
+    let identifiants = quotes[key].id
+    blocs.setAttribute("id", identifiants)
+    // ---> attribution des ids
 }
+
+
+
+// LOCAL STORAGE FAVORIS
+
+let i = 0
+
+document.querySelectorAll("blockquotes").forEach(take => {
+    take.addEventListener("click", function () {
+        localStorage.setItem(i++, take.getAttribute("id"))
+    })
+});
+
+
+// SUPPRIMER ITEM DONT VALEUR EST DéJà PRésente ???
+
+
+
+let TitreFavs = document.createElement("h1")
+document.body.prepend(TitreFavs)
+// TitreFavs.innerText = 
