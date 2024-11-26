@@ -92,31 +92,6 @@ let quotes = [
 ]
 
 
-// for (let i in quotes) {
-//     quotes[i]
-// }
 
-// for (const element in quotes) {
-//     console.log(element, (quotes[element]))
-// }
+export default quotes
 
-
-
-// const test = document.querySelector(".quote")
-
-// console.log(test)
-
-
-// const test2 = quotes[0].content
-
-// console.log(test2)
-
-
-
-// test.innerHTML = test2
-
-
-
-// for (let i in quotes) {
-//     quotes[i].content
-// }
