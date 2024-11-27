@@ -42,19 +42,28 @@ for (let key in quotes) {
 
 // LOCAL STORAGE FAVORIS
 
-let i = 0
+function getFavorites() {
+    const arrayFavorites = localStorage.getItem("favoris") 
+    return arrayFavorites ? JSON.parse(arrayFavorites) : []
+}
+
+let favorites = getFavorites()
+
+
 
 document.querySelectorAll("blockquotes").forEach(take => {
     take.addEventListener("click", function () {
-        localStorage.setItem(i++, take.getAttribute("id"))
+        favorites.push(take.getAttribute("id"))
+        localStorage.setItem("favoris", JSON.stringify(favorites))
+        TitreFavs.innerText = localStorage.getItem("favoris")
     })
 });
-
 
 // SUPPRIMER ITEM DONT VALEUR EST DéJà PRésente ???
 
 
-
 let TitreFavs = document.createElement("h1")
 document.body.prepend(TitreFavs)
-// TitreFavs.innerText = 
+TitreFavs.innerText = localStorage.getItem("favoris")
+// ---> inclure les ids des favoris dans le document
+
