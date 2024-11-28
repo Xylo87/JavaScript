@@ -52,28 +52,32 @@ let num2 = 2
 document.getElementById("num1-el").textContent = num1
 document.getElementById("num2-el").textContent = num2
 
-total = document.getElementById("sum-el")
+let total = document.getElementById("sum-el")
 
 document.getElementById("add").addEventListener("click", add)
 document.getElementById("sub").addEventListener("click", sub)
 document.getElementById("div").addEventListener("click", div)
-document.getElementById("div").addEventListener("click", mult)
+document.getElementById("mult").addEventListener("click", mult)
 
 
 
 function add() {
-   total.textContent = "Sum = " + (num1 + num2)
+    // let resultAdd = num1 + num2
+    total.textContent = "Sum = " + (num1 + num2)
 }
 
 function sub() {
-   total.textContent = "Sub = " + (num1 - num2)
+    // let resultSub = num1 - num2
+    total.textContent = "Sub = " + (num1 - num2)
 }
 
 function div() {
-   total.textContent = num1 / num2
+    // let resultDiv = num1 / num2
+    total.textContent = "Div = " + (num1 / num2)
 }
 
 function mult() {
-   total.textContent = num1 * num2
+    // let resultMult = num1 * num2
+    total.textContent = "Mult = " + (num1 * num2)
 }
 
