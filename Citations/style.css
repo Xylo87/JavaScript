@@ -28,6 +28,15 @@ body {
     position: relative;
 }
 
+.quote:hover {
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.255);
+}
+
+.quote:active {
+    transform: scale(0.99);
+}
+
 .small {
     align-self: flex-end;
 }
@@ -41,7 +50,7 @@ body {
 
 .fa-solid {
     display: none;
-    color:rgb(162, 7, 7);
+    color:rgb(202, 23, 23);
 }
 
 .heartDisplay {
