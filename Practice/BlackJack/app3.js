@@ -1,5 +1,6 @@
 let firstCard = 10
-let secondCard = 11
+let secondCard = 4
+let cards = [firstCard, secondCard]
 let sum = firstCard + secondCard
 
 let hasBlackJack = false
@@ -13,13 +14,18 @@ let messageEl = document.getElementById("message-el")
 let cardsEl = document.getElementById("cards-el")
 let sumEl = document.getElementById("sum-el")
 
-let start = document.getElementById("start")
+// let start = document.getElementById("start")
+// let newCard = document.getElementById("start")
+
+function startGame() {
+    renderGame()
+}
 
 
 
-start.addEventListener("click", function startGame() {
+function renderGame() {
     
-    cardsEl.textContent = "Cards: " + firstCard + " & " + secondCard
+    cardsEl.textContent = "Cards: " + cards[0] + " & " + cards[1]
     sumEl.textContent = "Sum: " + sum
     
     if (sum <= 20 ) {
@@ -36,7 +42,18 @@ start.addEventListener("click", function startGame() {
     
     console.log(hasBlackJack)
     console.log(isAlive)
-})
+}
+
+
+
+function newCard() {
+    console.log("Drawing a newcard from the deck !")
+    let card = 8
+    sum += card
+    renderGame()
+}
+
+
 
 
 
@@ -58,3 +75,18 @@ start.addEventListener("click", function startGame() {
 // } else {
 //     console.log("no")
 // }
+
+
+
+
+
+// let experience = ["arbogast", 37, true]
+
+// experience.push(6)
+// // ---> objet.methode
+
+// console.log(experience)
+
+// experience.pop()
+
+// console.log(experience)
