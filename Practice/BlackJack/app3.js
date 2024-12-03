@@ -50,6 +50,7 @@ function newCard() {
     console.log("Drawing a newcard from the deck !")
     let card = 8
     sum += card
+    cards.push(card)
     renderGame()
 }
 
@@ -90,3 +91,11 @@ function newCard() {
 // experience.pop()
 
 // console.log(experience)
+
+
+
+
+
+for (let i = 0; i < 11; i +=2) {
+    console.log(i)
+}
