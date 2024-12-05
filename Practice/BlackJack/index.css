@@ -35,6 +35,7 @@ h1 {
     width: 175px;
     font-size: large;
     padding: 5px 15px 5px;
+    transition: 150ms;
 }
 
 #start:hover, #newCard:hover {

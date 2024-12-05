@@ -25,7 +25,11 @@ function startGame() {
 
 function renderGame() {
     
-    cardsEl.textContent = "Cards: " + cards[0] + " & " + cards[1]
+    cardsEl.textContent = "Cards: "
+    for (let i = 0; i < cards.length; i++) {
+        cardsEl.textContent += cards[i] + " "
+    }
+    
     sumEl.textContent = "Sum: " + sum
     
     if (sum <= 20 ) {
@@ -96,6 +100,24 @@ function newCard() {
 
 
 
-for (let i = 0; i < 11; i +=2) {
-    console.log(i)
-}
+// for (let i = 0; i < 11; i +=2) {
+//     console.log(i)
+// }
+
+
+
+// let cardsTest = [7, 3, 9]
+
+// for (let i = 0; i < cardsTest.length; i++) {
+//     console.log(cardsTest[i])
+    
+// }
+
+
+
+// let sentence = ["Hello", "my", "name", "is", "Per"]
+// let greetingEl = document.getElementById("greeting-el")
+
+// for (let i = 0; i < sentence.length; i++) {
+//     greetingEl.textContent += sentence[i] + " "
+// }
