@@ -6,8 +6,8 @@ Le "Repository" contient :
 
 0. des leçons sur le JS 
 1. une application de type *To Do List*
-2. un ensemble d'exercices autour du changement de classes CSS type `toggle()` en JS (dossier */Squares*)
-3. un exercice autour de la création et de l'insertion d'éléments dans le **DOM** (dossier */Citations*)
+2. un ensemble d'exercices autour du changement de classes CSS type `toggle()` en JS (dossier *\Squares*)
+3. un exercice autour de la création et de l'insertion d'éléments dans le **DOM** (dossier *\Citations*)
 4. plusieurs exercices pratiques utilisant la méthode `Math.random()` et des opérateurs de base, pour concevoir des "apps" de type calculatrice, compteur et jeu de **BlackJack**
 
 ---
@@ -24,7 +24,7 @@ L'accent est mis l'affichage d'`alert()`, le changement de style (couleurs) d'é
 Les citations sont des **objets** JavaScript exploitées d'un fichier `script.js` à l'autre à l'aide des fonctionnalités **Import/Export** de JS.
 L'application est stylisée avec CSS et inclu un système cliquable de **Favoris**.
 
-4. Les applications du dossier */Pratice* sont axées sur des opérateurs algorithmiques de base, via des interfaces ludiques type compteur/sauvegarde de valeurs, calculatrice et jeu de **Blackjack** (utilisant les methodes `Math.floor()`et `Math.random()`).
+4. Les applications du dossier *\Practice* sont axées sur des opérateurs algorithmiques de base, via des interfaces ludiques type compteur/sauvegarde de valeurs, calculatrice et jeu de **Blackjack** (utilisant les methodes `Math.floor()`et `Math.random()`).
 
 ---
 
