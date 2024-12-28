@@ -3,6 +3,7 @@
 ## 1. Description
 Cette série de projets est un ensemble d'exercices pratiques en **JavaScript**, couplé à l'utilisation de **CSS**.
 Le "Repository" contient :
+
 0. des leçons sur le JS 
 1. une application de type *To Do List*
 2. un ensemble d'exercices autour du changement de classes CSS type `toggle()` en JS (dossier */Squares*)
@@ -35,7 +36,7 @@ L'application est stylisée avec CSS et inclu un système cliquable de **Favoris
    cd JavaScript
    ```
 
-2. Switcher entre les branches du projet pour accéder aux différentes applications "Square"
+2. Switcher entre les branches du projet pour accéder aux différentes applications *Square*.
 
 3. Exécutez le fichier principal pour tester le projet :
    ```bash
