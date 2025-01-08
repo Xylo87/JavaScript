@@ -244,5 +244,133 @@ let course = {
     tags: ["html", "css"]
 }
 
-console.log(course.tags)
+// console.log(course.tags)
 // console.log(course["tags"])
+
+let castle = {
+    title : "Castle of Arghhhhh",
+    price : 190,
+    isAvalable : false,
+    equipements : ["crossbow", "living armor", "iron maiden"],
+    sayHello : function () {
+        console.log("Hi !")
+    }
+}
+
+// console.log(castle)
+// console.log(castle.equipements)
+// console.log(castle.isAvalable)
+
+// Object + Method
+// castle.sayHello()
+
+
+
+
+let Foobar = {
+    name : "Thomas Mandolini",
+    age : 38,
+    country : "France"
+}
+
+function logData() {
+    console.log(Foobar.name + " is " + Foobar.age + " years old and lives in " + Foobar.country + ".")
+}
+
+// logData()
+
+
+
+
+// let age = 17
+
+// if (age < 6) {
+//     console.log("Free")
+// } else if (age < 18) {
+//     console.log("Child discount") 
+// } else if (age < 27) {
+//     console.log("Student discount") 
+// } else if (age < 67) {
+//     console.log("Full price") 
+// } else {
+//     console.log("Senior citizen discount")
+// }
+
+
+
+
+let largeCountries = ["China", "India", "USA", "Indonesia", "Pakistan"]
+
+// console.log("The 5 largest countries in the world :")
+// for (let i = 0; i < largeCountries.length; i++) {
+//     console.log("- " + largeCountries[i])
+// }
+
+
+
+let largeCountries2 = ["Tuvalu", "India", "USA", "Indonesia", "Monaco"]
+
+largeCountries2.pop()
+largeCountries2.shift()
+
+largeCountries2.push("Pakistan")
+largeCountries2.unshift("China")
+
+// console.log(largeCountries2)
+
+
+
+let dayOfMonth = 13
+let weekday = "Friday"
+
+// if (dayOfMonth === 13 && weekday === "Friday") {
+//     console.log("😱")
+// } else {
+//     console.log("Is ok")
+// }
+
+
+
+let hands = ["rock", "paper", "scissor"]
+// let randomIndex = Math.floor(Math.random() * hands.length)
+// let randomItem = hands[randomIndex]
+
+// console.log(randomItem)
+
+function randomItem() {
+    let randomIndex = Math.floor(Math.random() * hands.length)
+    return hands[randomIndex]
+}
+
+// console.log(randomItem())
+
+
+
+
+let fruit = ["🍎", "🍊", "🍎", "🍎", "🍊"]
+let appleShelf = document.getElementById("apple-shelf")
+let orangeShelf = document.getElementById("orange-shelf")
+
+function sort() {
+    fruit.forEach(element => {
+        if (element === "🍎") {
+            appleShelf.append(element)
+        } else {
+            orangeShelf.append(element)
+        }
+    });
+}
+
+// sort()
+
+function sortFruit() {
+    for (let i = 0; i < fruit.length; i++) {
+        if (fruit[i] === "🍎") {
+            appleShelf.textContent += "🍎"
+        } else if (fruit[i] === "🍊") {
+            appleShelf.textContent += "🍊"
+        }
+    }
+}
+
+// sortFruit()
