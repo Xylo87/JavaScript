@@ -235,3 +235,82 @@
 //     })
 // })
 // évènement écouté une fois uniquement
+
+
+
+
+
+// FUNCTION SYNCHRONE
+// function wait(duration) {
+//     // TIMESTAMP
+//     const t = Date.now()
+//     while(Date.now() - t < duration) {
+//     }
+// }
+
+// console.log("Bonjour")
+// wait(1000)
+// console.log("Les gens")
+
+
+
+// // FUNCTION NATIVE ASYNCHONE
+// setTimeout(() => {
+//     console.log("les gens")
+// }, 1000)
+
+// console.log("Au revoir")
+
+
+// FUNCTION NATIVE ASYNCHONE
+// const u = setInterval(() => {
+//     console.log("les gens")
+// }, 2000)
+
+
+// IDENTIFIANT DU TIMER -> METHODES ASSOCIÉES -> clearInterval(id)/clearTimeout(id)
+// console.log(u)
+
+
+// TP (affichage un certain nombre de fois)
+// let i = 0
+// const w = setInterval(() => {
+//     i++
+//     console.log("Hello")
+//     if (i >= 5) {
+//         clearInterval(w)
+//     }
+// }, 1000)
+
+
+// TP (décompte)
+function decompte(n) {
+    console.log(n)
+    const x = setInterval(() => {
+        n--
+        console.log(n)
+        if (n === 0) {
+            clearInterval(x)
+        }
+    }, 1000)
+}
+
+// decompte(3)
+// decompte(5)
+// DECOMPTES PARALLELES -> ASYNCHRONE
+
+
+
+
+
+// PROMESSES
+
+// PROMESSE QUI S'AUTO-RESOUT
+const p = new Promise((resolve, reject) => {
+    resolve(4)
+    // reject(4)
+})
+console.log(p)
+
+
+
