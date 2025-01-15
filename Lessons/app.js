@@ -306,11 +306,155 @@ function decompte(n) {
 // PROMESSES
 
 // PROMESSE QUI S'AUTO-RESOUT
-const p = new Promise((resolve, reject) => {
-    resolve(4)
-    // reject(4)
-})
-console.log(p)
+// const p = new Promise((resolve, reject) => {
+//     resolve(4)
+//     // reject(4)
+// })
+// console.log(p)
+
+// PROMESSE RESOLUE OU REJETÉE
+// p.then((n) => {
+//     console.log("Le nombre est", n)
+// }).p.catch((e) => {
+//     console.log("Echec", e)
+// })
+
+// ENCHAINEMENT DE PROMESSES > PROMESSE RETOURNE UNE VALEUR QUI RENVOIE ELLE-MEME UNE PROMESSE > ERREUR "CATCH" PEUT ÉGALEMENT RENVOYER UNE VALEUR QUI EST UNE PROMESSE
+// p
+//     .then((n) => {
+//         console.log("Le nombre est", n)
+//         return 5
+//     })  
+//     .then((n) => console.log("Le nombre est 2", n))
+//     .catch((e) => {
+//         console.log("Echec", e)
+//         return 2
+//     })
+
+// EXECUTÉ QUOI QU'IL ARRIVE, QUE LA PROMESSE SOIT EXÉCUTÉE OU NON
+// .finally(() => console.log("aaa"))
 
 
 
+// SYNTAXE PLUS SIMPLE
+function wait (duration) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve(duration)
+        }, duration);
+    })
+}
+
+function waitAndFail (duration) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            reject(duration)
+        }, duration);
+    })
+}
+
+// wait(2000)
+//     .then(() => {
+//         console.log("Attente 2s")
+//         return wait(1000)
+//     })
+//     .then(() => {
+//         console.log("Attente 1s")
+//     })
+
+
+
+// SYNTAXE À UTILISER
+// async function main() {
+//     return 4
+// }
+
+// async function main() {
+//     throw new Error();
+// }
+
+async function main() {
+    try {
+    await waitAndFail(2000)
+        console.log("Bonjour")
+    await wait(1000)
+        console.log("Hello")
+    } catch (e) {
+        console.log("Error")
+    }
+}
+
+async function main2() {
+    const duration = await wait(2000)
+    console.log(`Duration: ${duration}`)
+    return 5
+}
+
+// main()
+//     .then(n => console.log)
+
+// main2()
+
+
+
+
+
+// FETCH
+
+async function callAPI() {
+    // const r = await fetch("https://jsonplaceholder.typicode.com/users", {
+    //     method: "GET",
+    //     headers: {
+    //         "Accept" : "application/json",
+    //     }
+    // })
+    
+    const r = await fetch("https://jsonplaceholder.typicode.com/posts", {
+        method: "POST",
+        headers: {
+            // DONNÉES RECUES ACCEPTÉES
+            "Accept" : "application/json",
+            // TYPE DE DONNÉES ENVOYÉES AVEC POST
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({title: "Mon premier article"})
+    })
+
+    console.log(r.headers)
+    console.log(r.headers.get("Content-Type"))
+
+    if (r.ok === true) {
+        const data = await r.json()
+        return data
+    } else {
+        throw new Error("Impossible de contacter le serveur")
+    }
+}
+console.log(callAPI())
+
+// OBJET RESPONSE > NATIF À JS
+
+
+
+// fetch("https://jsonplaceholder.typicode.com/users")
+//     .then(r => r.text())
+//     .then(body => console.log(body))
+
+
+
+
+
+// const louis = {
+//     name : "Louis",
+//     age : 26,
+//     pseudo : true,
+//     notes : [2, 5, 6, 18]
+// }
+
+// const jsonLouis =  JSON.stringify(louis)
+
+// console.log(jsonLouis)
+
+// const jsonParseLouis = JSON.parse(jsonLouis)
+
+// console.log(jsonParseLouis)
