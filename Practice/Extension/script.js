@@ -47,7 +47,11 @@ function save() {
 
 
 button.addEventListener("click", save)
-inputText.addEventListener("keydown", save)
+inputText.addEventListener("keydown", function (event) {
+    if (event.key === "Enter") {
+        save()
+    }
+})
 
 
 
