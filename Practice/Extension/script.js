@@ -27,7 +27,7 @@ function renderLeads() {
 
 
 
-button.addEventListener("click", function () {
+function save() {
     let text = inputText.value
     
     // if (inputText.value === "") return
@@ -42,7 +42,14 @@ button.addEventListener("click", function () {
     } else {
         container.append(errorCanva)
     }
-})
+}
+
+
+
+button.addEventListener("click", save)
+inputText.addEventListener("keydown", save)
+
+
 
 
 
