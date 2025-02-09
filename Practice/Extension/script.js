@@ -3,6 +3,15 @@ const inputText = document.getElementById("input-el")
 const button = document.getElementById("input-btn")
 const ulEl = document.getElementById("ul-el")
 
+
+
+// let save = localStorage.setItem("myLeads", "https://www.youtube.com/watch?v=nA9cChFUcpQ")
+// console.log(save)
+
+// localStorage.clear()
+
+
+
 let myLeads = []
 
 const errorCanva = document.createElement("p")
@@ -27,6 +36,12 @@ function renderLeads() {
 
 
 
+// localStorage.clear()
+let leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"))
+console.log(leadsFromLocalStorage)
+
+
+
 function save() {
     let text = inputText.value
     
@@ -36,9 +51,12 @@ function save() {
         errorCanva.remove()
 
         myLeads.push(inputText.value)
-        renderLeads()
-        
         inputText.value = ""
+        
+        localStorage.setItem("myLeads", JSON.stringify(myLeads))
+        
+        renderLeads()
+
     } else {
         container.append(errorCanva)
     }
