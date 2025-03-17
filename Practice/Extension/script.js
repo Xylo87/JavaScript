@@ -2,23 +2,13 @@ const container = document.getElementById("container")
 const inputText = document.getElementById("input-el")
 const button = document.getElementById("input-btn")
 const ulEl = document.getElementById("ul-el")
-
-
-
-// let save = localStorage.setItem("myLeads", "https://www.youtube.com/watch?v=nA9cChFUcpQ")
-// console.log(save)
-
-// localStorage.clear()
-
-
+const deleteBtn = document.getElementById("delete-btn")
 
 let myLeads = []
 
-const errorCanva = document.createElement("p")
-errorCanva.textContent = "Please enter a valid URL"
 
 
-
+// > Fonction de génération d'une liste de liens à partir du tableau + insertion de la liste dans le DOM
 function renderLeads() {
     let listItems = ""
     
@@ -30,13 +20,14 @@ function renderLeads() {
             </a>
         </li>`
         
-        ulEl.innerHTML = listItems
     })
+    ulEl.innerHTML = listItems
 }
 
 
 
-let leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"))
+// > Getting Leads from LocalStorage when refresh page + insert Leads in array + display array function call
+const leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"))
 console.log(leadsFromLocalStorage)
 
 if (leadsFromLocalStorage) {
@@ -47,19 +38,30 @@ if (leadsFromLocalStorage) {
 
 
 
+
+// > Invalid URL input text
+const errorCanva = document.createElement("p")
+errorCanva.textContent = "Please enter a valid URL"
+
+
+
+// > Saving function when input
 function save() {
     let text = inputText.value
     
-    // if (inputText.value === "") return
     if (text.startsWith("http")) {
         
+        // > If link correct, remove error message
         errorCanva.remove()
 
+        // > Pushing inputted text into the array and clearing input field
         myLeads.push(inputText.value)
         inputText.value = ""
         
+        // > Setting leads in the LocalStorage
         localStorage.setItem("myLeads", JSON.stringify(myLeads))
         
+        // > Display array function call
         renderLeads()
 
     } else {
@@ -69,6 +71,7 @@ function save() {
 
 
 
+// > Mouse + keyboard input listeners
 button.addEventListener("click", save)
 inputText.addEventListener("keydown", function (event) {
     if (event.key === "Enter") {
@@ -78,25 +81,9 @@ inputText.addEventListener("keydown", function (event) {
 
 
 
-
-
-// for (let i = 0; i < myLeads.length; i++) {
-//     console.log(myLeads[i]);
-// }
-
-// test.innerHTML = "<button id=\"testButton\">Buy !</button><br><br>"
-
-
-
-// const recipient = "James"
-// const sender =  "Théo"
-
-// const email = "Hey " + recipient + " ! How is it going ? Cheers Per"
-
-// console.log(email)
-
-// const email2 = `Hey ${recipient} ! 
-// How is it going ? 
-// Cheers ${sender}`
-
-// console.log(email2)
+// > Delete all button
+deleteBtn.addEventListener("dblclick", () => {
+    // localStorage.clear()
+    myLeads = []
+    renderLeads()
+})
