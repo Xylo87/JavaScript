@@ -5,24 +5,7 @@ const ulEl = document.getElementById("ul-el")
 const deleteBtn = document.getElementById("delete-btn")
 
 let myLeads = []
-
-
-
-// > Fonction de génération d'une liste de liens à partir du tableau + insertion de la liste dans le DOM
-function renderLeads() {
-    let listItems = ""
-    
-    myLeads.forEach(element => {
-        listItems += 
-        `<li>
-            <a href='${element}' target='_blank'> 
-                ${element}
-            </a>
-        </li>`
-        
-    })
-    ulEl.innerHTML = listItems
-}
+let oldLeads = []
 
 
 
@@ -33,9 +16,26 @@ console.log(leadsFromLocalStorage)
 if (leadsFromLocalStorage) {
     myLeads = leadsFromLocalStorage
 
-    renderLeads()
+    render(myLeads)
 }
 
+
+
+// > Fonction de génération d'une liste de liens à partir du tableau + insertion de la liste dans le DOM
+function render(leads) {
+    let listItems = ""
+    
+    leads.forEach(element => {
+        listItems += 
+        `<li>
+            <a href='${element}' target='_blank'> 
+                ${element}
+            </a>
+        </li>`
+        
+    })
+    ulEl.innerHTML = listItems
+}
 
 
 
@@ -62,7 +62,7 @@ function save() {
         localStorage.setItem("myLeads", JSON.stringify(myLeads))
         
         // > Display array function call
-        renderLeads()
+        render(myLeads)
 
     } else {
         container.append(errorCanva)
@@ -83,7 +83,7 @@ inputText.addEventListener("keydown", function (event) {
 
 // > Delete all button
 deleteBtn.addEventListener("dblclick", () => {
-    // localStorage.clear()
+    localStorage.clear()
     myLeads = []
-    renderLeads()
+    render(myLeads)
 })
