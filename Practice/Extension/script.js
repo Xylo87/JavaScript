@@ -1,6 +1,7 @@
 const container = document.getElementById("container")
 const inputText = document.getElementById("input-el")
 const button = document.getElementById("input-btn")
+const buttonTab = document.getElementById("tab-btn")
 const ulEl = document.getElementById("ul-el")
 const deleteBtn = document.getElementById("delete-btn")
 
@@ -86,4 +87,14 @@ deleteBtn.addEventListener("dblclick", () => {
     localStorage.clear()
     myLeads = []
     render(myLeads)
+})
+
+
+
+const tabs = [
+    {url: "https://www.linkedin.com/in/theo-arbogast/"}
+]
+
+buttonTab.addEventListener("click", () => {
+    console.log(tabs[0].url)
 })
