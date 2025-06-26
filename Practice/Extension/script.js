@@ -40,12 +40,13 @@ errorCanva.textContent = "Please enter a valid URL"
 buttonTab.addEventListener("click", () => {
     
     chrome.tabs.query({active: true, currentWindow: true}, (tabs) => {
-        console.log("Hello")
-        // myLeads.push(tabs[0].url)
+        myLeads.push(tabs[0].url)
     
-        // localStorage.setItem("myLeads", JSON.stringify(myLeads))
+        localStorage.setItem("myLeads", JSON.stringify(myLeads))
 
-        // render(myLeads)
+        render(myLeads)
+
+        errorCanva.remove()
     })
 })
 
