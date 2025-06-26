@@ -30,9 +30,8 @@ inputText.addEventListener("keydown", function (event) {
     }
 })
 
-// > Invalid URL input text
+// > Invalid URL input
 const errorCanva = document.createElement("p")
-errorCanva.textContent = "Please enter a valid URL"
 
 
 
@@ -40,13 +39,20 @@ errorCanva.textContent = "Please enter a valid URL"
 buttonTab.addEventListener("click", () => {
     
     chrome.tabs.query({active: true, currentWindow: true}, (tabs) => {
-        myLeads.push(tabs[0].url)
+        if (!myLeads.includes(tabs[0].url)) {
+            
+            myLeads.push(tabs[0].url)
     
-        localStorage.setItem("myLeads", JSON.stringify(myLeads))
+            localStorage.setItem("myLeads", JSON.stringify(myLeads))
 
-        render(myLeads)
+            render(myLeads)
+            errorCanva.remove()
+        }
 
-        errorCanva.remove()
+        else {
+            errorCanva.textContent = "URL already saved !"
+            container.append(errorCanva)
+        }
     })
 })
 
@@ -59,6 +65,7 @@ deleteBtn.addEventListener("dblclick", () => {
     myLeads = []
     render(myLeads)
 
+    inputText.value = ""
     errorCanva.remove()
 })
 
@@ -94,16 +101,26 @@ function save() {
         errorCanva.remove()
 
         // > Pushing inputted text into the array and clearing input field
-        myLeads.push(inputText.value)
-        inputText.value = ""
+        if (!myLeads.includes(inputText.value)) {
+            
+            myLeads.push(inputText.value)
+            inputText.value = ""
         
-        // > Setting leads in the LocalStorage
-        localStorage.setItem("myLeads", JSON.stringify(myLeads))
+            // > Setting leads in the LocalStorage
+            localStorage.setItem("myLeads", JSON.stringify(myLeads))
         
-        // > Display array function call
-        render(myLeads)
+            // > Display array function call
+            render(myLeads)
+            errorCanva.remove()
+        }
+
+        else {
+            errorCanva.textContent = "URL already saved !"
+        }
 
     } else {
-        container.append(errorCanva)
+        errorCanva.textContent = "Please enter a valid URL !"
     }
+
+    container.append(errorCanva)
 }
