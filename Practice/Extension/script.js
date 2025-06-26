@@ -6,19 +6,62 @@ const ulEl = document.getElementById("ul-el")
 const deleteBtn = document.getElementById("delete-btn")
 
 let myLeads = []
-let oldLeads = []
+// let oldLeads = []
 
 
 
 // > Getting Leads from LocalStorage when refresh page + insert Leads in array + display array function call
 const leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"))
-console.log(leadsFromLocalStorage)
+// console.log(leadsFromLocalStorage)
 
 if (leadsFromLocalStorage) {
     myLeads = leadsFromLocalStorage
 
     render(myLeads)
 }
+
+
+
+// > Mouse + keyboard input listeners
+button.addEventListener("click", save)
+inputText.addEventListener("keydown", function (event) {
+    if (event.key === "Enter") {
+        save()
+    }
+})
+
+// > Invalid URL input text
+const errorCanva = document.createElement("p")
+errorCanva.textContent = "Please enter a valid URL"
+
+
+
+// > Saving tabs
+buttonTab.addEventListener("click", () => {
+    
+    chrome.tabs.query({active: true, currentWindow: true}, (tabs) => {
+        console.log("Hello")
+        // myLeads.push(tabs[0].url)
+    
+        // localStorage.setItem("myLeads", JSON.stringify(myLeads))
+
+        // render(myLeads)
+    })
+})
+
+
+
+// > Delete all button
+deleteBtn.addEventListener("dblclick", () => {
+    localStorage.clear()
+    
+    myLeads = []
+    render(myLeads)
+
+    errorCanva.remove()
+})
+
+
 
 
 
@@ -37,12 +80,6 @@ function render(leads) {
     })
     ulEl.innerHTML = listItems
 }
-
-
-
-// > Invalid URL input text
-const errorCanva = document.createElement("p")
-errorCanva.textContent = "Please enter a valid URL"
 
 
 
@@ -69,32 +106,3 @@ function save() {
         container.append(errorCanva)
     }
 }
-
-
-
-// > Mouse + keyboard input listeners
-button.addEventListener("click", save)
-inputText.addEventListener("keydown", function (event) {
-    if (event.key === "Enter") {
-        save()
-    }
-})
-
-
-
-// > Delete all button
-deleteBtn.addEventListener("dblclick", () => {
-    localStorage.clear()
-    myLeads = []
-    render(myLeads)
-})
-
-
-
-const tabs = [
-    {url: "https://www.linkedin.com/in/theo-arbogast/"}
-]
-
-buttonTab.addEventListener("click", () => {
-    console.log(tabs[0].url)
-})
