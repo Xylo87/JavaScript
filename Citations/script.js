@@ -77,3 +77,6 @@ document.querySelectorAll("blockquotes").forEach(take => {
         localStorage.setItem("favSave", JSON.stringify(favSave))
     });
 })
+
+iconReg.remove()
+iconSol.remove()
