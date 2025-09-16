@@ -1,4 +1,4 @@
-import quotes from "./quotes.js"
+import {quotes} from "./quotes.js"
 // ---> Import
 
 

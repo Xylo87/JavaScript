@@ -1,4 +1,4 @@
-let quotes = [
+export const quotes = [
     {
         "id": 1,
         "author": "Rocky Balboa",
@@ -93,5 +93,5 @@ let quotes = [
 
 
 
-export default quotes
+// export default quotes
 
