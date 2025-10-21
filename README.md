@@ -45,13 +45,7 @@ L'application est stylisée avec CSS et inclu un système cliquable de **Favoris
 
 ---
 
-## 4. Améliorations possibles 
-
-- Ajout d'un système de `LocalStorage`pour une sauvegarde des **Favoris** entre chaque utilisation du navigateur pour l'application *Citations*.
-
----
-
-## 5. Auteur
+## 4. Auteur
 Projet réalisé par Théo Arbogast (aka Xylo87).
 N'hésitez pas à ouvrir une issue ou à me contacter pour toute suggestion ou question.
 
